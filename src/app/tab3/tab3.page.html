@@ -1,17 +1,167 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title> Edit/Del </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">Edit and Delete</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<app-explore-container name="Tab 3 page"></app-explore-container>
+
+<ion-content>
+  <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <ion-list>
+          <ion-list-header>FOOD</ion-list-header>
+          <ion-item *ngFor="let ord of food">
+            <ion-thumbnail slot="start">
+              <img src="{{ord.image}}" class="pic" />
+            </ion-thumbnail>
+            <ion-label class="p">
+              <h1>{{ord.name}}</h1>
+              <p>{{ord.ingredient}}</p>
+              <p>{{ord.how}}</p>
+            </ion-label>
+            <ion-text>
+              <ion-row>
+                <ion-icon
+                  name="create"
+                  (click)="editF(ord)"
+                  color="warning"
+                  style="zoom: 1.8"
+                ></ion-icon>
+              </ion-row>
+              <ion-row>
+                <ion-icon
+                  color="danger"
+                  name="trash-bin"
+                  (click)="delF(ord)"
+                  style="zoom: 1.8"
+                ></ion-icon>
+              </ion-row>
+            </ion-text>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <ion-list>
+          <ion-list-header>DESSERT</ion-list-header>
+          <ion-item class="mar" *ngFor="let ord of dessert">
+            <ion-thumbnail slot="start">
+              <img src="{{ord.image}}" class="pic" />
+            </ion-thumbnail>
+            <ion-label class="p">
+              <h1>{{ord.name}}</h1>
+              <p>{{ord.ingredient}}</p>
+              <p>{{ord.how}}</p>
+            </ion-label>
+            <ion-text>
+              <ion-row>
+                <ion-icon
+                  name="create"
+                  (click)="editD(ord)"
+                  color="warning"
+                  style="zoom: 1.8"
+                ></ion-icon>
+              </ion-row>
+              <ion-row>
+                <ion-icon
+                  color="danger"
+                  name="trash-bin"
+                  (click)="delD(ord)"
+                  style="zoom: 1.8"
+                ></ion-icon>
+              </ion-row>
+            </ion-text>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <ion-list>
+          <ion-list-header>DRINK</ion-list-header>
+          <ion-item class="mar" *ngFor="let ord of drink">
+            <ion-thumbnail slot="start">
+              <img src="{{ord.image}}" class="pic" />
+            </ion-thumbnail>
+            <ion-label class="p">
+              <h1>{{ord.name}}</h1>
+              <p>{{ord.ingredient}}</p>
+              <p>{{ord.how}}</p>
+            </ion-label>
+            <ion-text>
+              <ion-row>
+                <ion-icon
+                  name="create"
+                  (click)="editDr(ord)"
+                  color="warning"
+                  style="zoom: 1.8"
+                ></ion-icon>
+              </ion-row>
+              <ion-row>
+                <ion-icon
+                  color="danger"
+                  name="trash-bin"
+                  (click)="delDr(ord)"
+                  style="zoom: 1.8"
+                ></ion-icon>
+              </ion-row>
+            </ion-text>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <ion-list>
+          <ion-list-header>OTHER</ion-list-header>
+          <ion-item class="mar" *ngFor="let ord of other">
+            <ion-thumbnail slot="start">
+              <img src="{{ord.image}}" class="pic" />
+            </ion-thumbnail>
+            <ion-label class="p">
+              <h1>{{ord.name}}</h1>
+              <p>{{ord.ingredient}}</p>
+              <p>{{ord.how}}</p>
+            </ion-label>
+            <ion-text>
+              <ion-row>
+                <ion-icon
+                  name="create"
+                  (click)="editO(ord)"
+                  color="warning"
+                  style="zoom: 1.8"
+                ></ion-icon>
+              </ion-row>
+              <ion-row>
+                <ion-icon
+                  color="danger"
+                  name="trash-bin"
+                  (click)="delO(ord)"
+                  style="zoom: 1.8"
+                ></ion-icon>
+              </ion-row>
+            </ion-text>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-title style="text-align: center"> slide for next category </ion-title>
+  </ion-toolbar>
+</ion-footer>

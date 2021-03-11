@@ -1,0 +1,48 @@
+.pic{
+width: 100%;
+height: auto;
+}
+.colors{
+  color:darkgoldenrod;
+  font-family: 'Kanit', sans-serif;
+}
+.p{
+  display: inline-block;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  font-family: 'Kanit', sans-serif;
+}
+.card{
+  width: 100%;
+  height: auto;
+  margin-right: 5px;
+  background-color: rgb(255, 187, 78);
+}
+h1{
+margin-left: 20px;
+margin-bottom: -10px;
+font-family: 'Kanit', sans-serif;
+}
+.alert{
+  background-color: red;
+  overflow-wrap:break-word;
+  font-family: 'Kanit', sans-serif;
+}
+h1{
+  font-family: 'Kanit', sans-serif;
+}
+p{
+  font-family: 'Kanit', sans-serif;
+  color: darkgray;
+  margin-left: 20px;
+  margin-top: 5px;
+  font-size: small;
+}
+.b{
+  color: black;
+  margin-top: -15px;
+  margin-left: -10px;
+}
+

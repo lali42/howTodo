@@ -1,17 +1,71 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Home </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">How to do</ion-title>
+  </ion-toolbar>
+</ion-header>
+<app-explore-container name="Tab 1 page"></app-explore-container>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+  <ion-toolbar style="height: 120px">
+    <img
+      src="https://image.freepik.com/free-photo/traditional-italian-food-background-with-spaghetti-tomatoes-cheese-olives-oil-dark-background_1220-5674.jpg"
+      class="pic"
+    />
+  </ion-toolbar>
+  <p>Record the food you want to create.</p>
+
+
+  <h1>Food</h1>
+  <ion-slides>
+    <ion-slide *ngFor="let f of food" slot="start">
+      <ion-card class="card" (click)="send(f)">
+        <img src="{{f.image}}" />
+        <ion-card-content>
+          <h1 class="b">{{f.name}}</h1>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <h1>Dessert</h1>
+  <ion-slides>
+    <ion-slide *ngFor="let f of dessert">
+      <ion-card class="card" (click)="send(f)">
+        <img src="{{f.image}}" />
+        <ion-card-content>
+          <h1 class="b">{{f.name}}</h1>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <h1>Drink</h1>
+  <ion-slides>
+    <ion-slide *ngFor="let f of drink">
+      <ion-card class="card" (click)="send(f)">
+        <img src="{{f.image}}" />
+        <ion-card-content>
+          <h1 class="b">{{f.name}}</h1>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <h1>Other</h1>
+  <ion-slides>
+    <ion-slide *ngFor="let f of other">
+      <ion-card class="card" (click)="send(f)">
+        <img src="{{f.image}}" />
+        <ion-card-content>
+          <h1 class="b">{{f.name}}</h1>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

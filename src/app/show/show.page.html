@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> {{this.name}} </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" (click)="back()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="{{this.image}}" class="img" />
+
+  <div class="mar">
+    <ion-label class="mar">
+      <h1>Ingredeint</h1>
+      <div *ngFor="let i of this.ingredient">
+        <h2>{{i}}</h2>
+      </div>
+    </ion-label>
+
+    <ion-label class="mar">
+      <h1>How to do</h1>
+      <div *ngFor="let i of this.how">
+        <h2>{{i}}</h2>
+      </div>
+    </ion-label>
+  </div>
+</ion-content>

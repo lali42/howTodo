@@ -1,17 +1,85 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title> Add </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">Add</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<app-explore-container name="Tab 2 page"></app-explore-container>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col offset-4>
+        <div>
+          <ion-card class="wh sd" (click)="ADDF()">
+            <ion-card-header>
+              <ion-card-title
+                ><ion-icon
+                  color="warning"
+                  name="fast-food"
+                  style="zoom: 3"
+                ></ion-icon
+              ></ion-card-title>
+              <ion-card-subtitle>Food</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <ion-card class="wh sd" (click)="ADDDR()">
+            <ion-card-header>
+              <ion-card-title
+                ><ion-icon
+                  color="warning"
+                  name="cafe"
+                  style="zoom: 3"
+                ></ion-icon
+              ></ion-card-title>
+              <ion-card-subtitle>Drink</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset-4>
+        <div>
+          <ion-card class="wh sd" (click)="ADDD()">
+            <ion-card-header>
+              <ion-card-title
+                ><ion-icon
+                  color="warning"
+                  name="ice-cream"
+                  style="zoom: 3"
+                ></ion-icon
+              ></ion-card-title>
+              <ion-card-subtitle>Dessdert</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <ion-card class="wh sd" (click)="ADDO()">
+            <ion-card-header>
+              <ion-card-title
+                ><ion-icon name="grid" style="zoom: 3"></ion-icon
+              ></ion-card-title>
+              <ion-card-subtitle>Other</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
